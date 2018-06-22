@@ -21,7 +21,7 @@ public:
     Matrix(const size_t rows, const size_t cols, const void* data):
         rows_(rows), cols_(cols) {
         size_t align_cols;
-#ifdef __GNUC__
+/*#ifdef __GNUC__
 #ifdef __AVX__
         align_cols = (cols + 7)/8*8;//re align to sse format
 #else
@@ -31,8 +31,9 @@ public:
         align_cols = cols;
 #endif
 #endif
-#endif
-        //std::cout<<" DD: "<<align_cols<<std::endl;
+#endif*/
+		align_cols = cols;
+        std::cout<<" DD: "<<align_cols<<std::endl;
         for (size_t i = 0; i < rows; i++) {
             row_pointers_.push_back(reinterpret_cast<const T*>(data) + (align_cols * i));
         }
