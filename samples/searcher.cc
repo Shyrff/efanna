@@ -74,6 +74,6 @@ static PyMethodDef MyMethods[] = {
     {NULL, NULL, 0, NULL}        /* Sentinel */
 };
 
-PyMODINIT_FUNC initbuilder(void){
+PyMODINIT_FUNC initsearcher(void){
     (void) Py_InitModule("searcher", MyMethods);
 }
