@@ -4,3 +4,4 @@ to customize  input format/usage vector operation edit builder.cc in samples dir
 
 API:
 builder.buid_trees() and builder.build_graph() take the same args and do the same as efanna_index_buildgraph and efanna_index_buildtrees from samples dir
+searcher.search() takes the same args and do the same as efanna_search from samples dir (11th argument(search type) is not supported yet)
